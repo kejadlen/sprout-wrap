@@ -1,3 +1,22 @@
+# README
+
+*Attention*: You probably do *not* want to be using this repository. I've
+forked this solely to work around some issues in
+[sprout-homebrew][sprout-homebrew]:
+
+- pivotal-sprout/sprout-homebrew#21
+- chef-cookbooks/homebrew#87
+
+At some point during the install, Ruby 2.2.3 will fail to install. This can be
+worked around by running the installation manually and then re-running soloist.
+
+``` shell
+rbenv install 2.2.3
+caffeinate bundle exec soloist
+```
+
+[sprout-homebrew]: https://github.com/pivotal-sprout/sprout-homebrew/
+
 # sprout-wrap
 
 [![Build Status](https://travis-ci.org/pivotal-sprout/sprout-wrap.png?branch=master)](https://travis-ci.org/pivotal-sprout/sprout-wrap)
@@ -23,7 +42,7 @@ If you receive a message about the update server being unavailable and are on Ma
 
 ### 2. Clone this project
 
-    git clone https://github.com/pivotal-sprout/sprout-wrap.git
+    git clone https://github.com/kejadlen/sprout-wrap.git
     cd sprout-wrap
 
 ### 3. Install soloist & and other required gems
